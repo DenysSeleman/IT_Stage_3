@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="ServiceDBMS" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50160/ServiceDBMS.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50160/ServiceDBMS.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50160/ServiceDBMS.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceDBMS_CreateDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDB" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_CreateDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_AddTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTable" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_AddTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_GetListCNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListCNames" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_GetListCNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListCNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_GetListCTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListCTypes" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_GetListCTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListCTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_GetListRows_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListRows" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_GetListRows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListRowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_AddColumn_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddColumn" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_AddColumn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddColumnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_AddRow_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRow" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_AddRow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_ChangeValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeValue" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_ChangeValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_DeleteRow_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRow" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_DeleteRow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_DeleteColumn_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteColumn" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_DeleteColumn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteColumnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_DeleteTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTable" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_DeleteTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_SaveDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDB" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_SaveDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_OpenDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:OpenDB" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_OpenDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OpenDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_GetTableNameList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTableNameList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_GetTableNameList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTableNameListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_GetDBName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDBName" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_GetDBName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDBNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_JoinTables_InputMessage">
+    <wsdl:part name="parameters" element="tns:JoinTables" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBMS_JoinTables_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JoinTablesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceDBMS">
+    <wsdl:operation name="CreateDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBMS/CreateDB" message="tns:IServiceDBMS_CreateDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBMS/CreateDBResponse" message="tns:IServiceDBMS_CreateDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBMS/AddTable" message="tns:IServiceDBMS_AddTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBMS/AddTableResponse" message="tns:IServiceDBMS_AddTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListCNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBMS/GetListCNames" message="tns:IServiceDBMS_GetListCNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBMS/GetListCNamesResponse" message="tns:IServiceDBMS_GetListCNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListCTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBMS/GetListCTypes" message="tns:IServiceDBMS_GetListCTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBMS/GetListCTypesResponse" message="tns:IServiceDBMS_GetListCTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListRows">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBMS/GetListRows" message="tns:IServiceDBMS_GetListRows_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBMS/GetListRowsResponse" message="tns:IServiceDBMS_GetListRows_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddColumn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBMS/AddColumn" message="tns:IServiceDBMS_AddColumn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBMS/AddColumnResponse" message="tns:IServiceDBMS_AddColumn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBMS/AddRow" message="tns:IServiceDBMS_AddRow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBMS/AddRowResponse" message="tns:IServiceDBMS_AddRow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBMS/ChangeValue" message="tns:IServiceDBMS_ChangeValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBMS/ChangeValueResponse" message="tns:IServiceDBMS_ChangeValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBMS/DeleteRow" message="tns:IServiceDBMS_DeleteRow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBMS/DeleteRowResponse" message="tns:IServiceDBMS_DeleteRow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteColumn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBMS/DeleteColumn" message="tns:IServiceDBMS_DeleteColumn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBMS/DeleteColumnResponse" message="tns:IServiceDBMS_DeleteColumn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBMS/DeleteTable" message="tns:IServiceDBMS_DeleteTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBMS/DeleteTableResponse" message="tns:IServiceDBMS_DeleteTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBMS/SaveDB" message="tns:IServiceDBMS_SaveDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBMS/SaveDBResponse" message="tns:IServiceDBMS_SaveDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OpenDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBMS/OpenDB" message="tns:IServiceDBMS_OpenDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBMS/OpenDBResponse" message="tns:IServiceDBMS_OpenDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTableNameList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBMS/GetTableNameList" message="tns:IServiceDBMS_GetTableNameList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBMS/GetTableNameListResponse" message="tns:IServiceDBMS_GetTableNameList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDBName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBMS/GetDBName" message="tns:IServiceDBMS_GetDBName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBMS/GetDBNameResponse" message="tns:IServiceDBMS_GetDBName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JoinTables">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBMS/JoinTables" message="tns:IServiceDBMS_JoinTables_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBMS/JoinTablesResponse" message="tns:IServiceDBMS_JoinTables_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceDBMS" type="tns:IServiceDBMS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateDB">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBMS/CreateDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTable">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBMS/AddTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListCNames">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBMS/GetListCNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListCTypes">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBMS/GetListCTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListRows">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBMS/GetListRows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddColumn">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBMS/AddColumn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRow">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBMS/AddRow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeValue">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBMS/ChangeValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRow">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBMS/DeleteRow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteColumn">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBMS/DeleteColumn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTable">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBMS/DeleteTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDB">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBMS/SaveDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OpenDB">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBMS/OpenDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTableNameList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBMS/GetTableNameList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDBName">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBMS/GetDBName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JoinTables">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBMS/JoinTables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceDBMS">
+    <wsdl:port name="BasicHttpBinding_IServiceDBMS" binding="tns:BasicHttpBinding_IServiceDBMS">
+      <soap:address location="http://localhost:50160/ServiceDBMS.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

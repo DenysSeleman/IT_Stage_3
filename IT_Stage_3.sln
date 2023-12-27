@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IT_Stage_3", "IT_Stage_3\IT_Stage_3.csproj", "{BDCE8F70-0053-44A4-A6E8-004B296F59BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsClient", "WinFormsClient\WinFormsClient.csproj", "{FB7AB140-E710-44AA-8BE0-F8C45DE4ECC5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BDCE8F70-0053-44A4-A6E8-004B296F59BF} = {BDCE8F70-0053-44A4-A6E8-004B296F59BF}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDCE8F70-0053-44A4-A6E8-004B296F59BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDCE8F70-0053-44A4-A6E8-004B296F59BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDCE8F70-0053-44A4-A6E8-004B296F59BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDCE8F70-0053-44A4-A6E8-004B296F59BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB7AB140-E710-44AA-8BE0-F8C45DE4ECC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB7AB140-E710-44AA-8BE0-F8C45DE4ECC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB7AB140-E710-44AA-8BE0-F8C45DE4ECC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB7AB140-E710-44AA-8BE0-F8C45DE4ECC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4EB85471-3542-49BD-B24B-BA932C8C5E8A}
+	EndGlobalSection
+EndGlobal
